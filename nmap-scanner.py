@@ -1,16 +1,12 @@
-# Ref: https://www.studytonight.com/network-programming-in-python/integrating-port-scanner-with-nmap
-# Ref: https://pypi.org/project/python-nmap/
-# Name of script: nmap-scan-sample.py
-"""
-Author: Ritchie Yapp
-Index number: 2205810
+"""Author: @speckly
+https://github.com/speckly
 Filename: nmap-scanner.py
 
 Description: A script to perform an nmap scan on localhost and host with 
 hostname 'scanme.nmap.org', outputs the results of the scan on the top 10 ports per host.
 
-Known issues: 
-TODO: 
+Ref: https://www.studytonight.com/network-programming-in-python/integrating-port-scanner-with-nmap
+Ref: https://pypi.org/project/python-nmap/
 """
 import os # Only required once
 

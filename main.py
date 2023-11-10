@@ -2,8 +2,7 @@
 https://github.com/speckly
 Created on 9 Jan 2023
 
-Dependencies: pip install rich 
-pip install scapy
+File: main.py
 """
 
 import os
@@ -65,10 +64,11 @@ def vInterface():
                         input("\nEnter any key to continue: ")
                     elif opt == 4:
                         break
-                    else:
-                        ftp = ftplib.FTP()
+                    else: # Options 1 and 2 are here
+                        FTP_PORT = 2121
+                        ftp = ftplib.FTP() 
                         try:
-                            ftp.connect('localhost', 2121)
+                            ftp.connect('localhost', FTP_PORT)
                             ftp.login()
                             if opt == 1:
                                 cli.getFile(ftp) 
@@ -81,6 +81,7 @@ def vInterface():
                 pck.main()
                 input("Enter to return: ")
             case 4: 
-                break
-    #flow out to termination when the loop is broken
-vInterface()
+                return
+
+if __name__ == "__main__":
+    vInterface()
